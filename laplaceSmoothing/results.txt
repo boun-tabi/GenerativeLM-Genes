@@ -1,0 +1,7 @@
+Results
+
+Tets Set Perplexities for Different N Values
+	
+N:6: 3.8652
+N:7: 3.8365
+N:8: 3.8121

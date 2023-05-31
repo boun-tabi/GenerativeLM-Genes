@@ -1,0 +1,26 @@
+Hyperparameter Experiment Results
+
+The basic procedure followed is like the following. For any given fixed sequence length, we started with a hyperparameter configuration which looked reasonable. After that, if the model was underfitting, relevant hyperparameters are changed so that the model's capacity is increased. When overfitting was seen the opposite is done.
+ 
+Initial Choice (Trial 1): 		val_perplexity: 3.6601
+- EMBED_DIM = 256
+- FEED_FORWARD_DIM = 256
+- NUM_LAYERS = 2  
+- NUM_HEADS = 3
+
+Then
+
+Trial 2) NUM_LAYERS = 3			val_perplexity: 3.6472
+Trial 3) NUM_HEADS = 4			val_perplexity: 3.6614
+Trial 4) EMBED_DIM = 512 		val_perplexity: 3.6562
+Trial 5) FEED_FORWARD_DIM = 512		val_perplexity: 3.6438
+Trial 6) NUM_LAYERS = 4			val_perplexity: 3.6377
+Trial 7) EMBED_DIM = 1024		val_perplexity: 3.6656
+Trial 8) FEED_FORWARD_DIM = 1024	val_perplexity: 3.6454
+Trial 9) NUM_LAYERS = 5			val_perplexity: 3.6331	(CHOSEN)
+
+
+
+Test Set Results For Trial 3)  	       test_perplexity: 3.6361	
+
+
