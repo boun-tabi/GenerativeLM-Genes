@@ -2,22 +2,24 @@ Hyperparameter Experiment Results
 
 The basic procedure followed is like the following. For any given fixed sequence length, we started with a hyperparameter configuration which looked reasonable. After that, if the model was underfitting, relevant hyperparameters are changed so that the model's capacity is increased. When overfitting was seen the opposite is done.
 
-Initial Choice (Trial 1): 	val_perplexity: 3.4273
+Initial Choice (Trial 1): 	val_perplexity: 3.5257 
 - EMBED_DIM = 256
 - LSTM_DIM = 256
 - NUM_LAYERS = 2  
 
 Then 
 
-Trial 2) NUM_LAYERS = 1		val_perplexity: 3.5816
-Trial 3) NUM_LAYERS = 3		val_perplexity: 3.3880	(CHOSEN)
-Trial 4) EMBED_DIM = 128	val_perplexity: 3.4449
-Trial 5) LSTM_DIM = 128		val_perplexity: 3.4446
-Trial 6) NUM_LAYERS = 4 	val_perplexity: 3.4131
-Trial 7) EMBED_DIM = 512	val_perplexity: 3.4712
-Trial 8) LSTM_DIM = 512		val_perplexity: 3.3934 (not stable)
+Trial 2) NUM_LAYERS = 1						val_perplexity: 3.5951
+Trial 3) NUM_LAYERS = 3						val_perplexity: 3.4770
+Trial 4) EMBED_DIM = 128					val_perplexity: 3.4995
+Trial 5) LSTM_DIM = 128						val_perplexity: 3.6067
+Trial 6) EMBED_DIM = 512					val_perplexity: 3.5441
+Trial 7) LSTM_DIM = 512						val_perplexity: 3.4399
+Trial 8) NUM_LAYERS = 4 					val_perplexity: 3.4637 
+Trial 9) NUM_LAYERS = 4 and EMBED_DIM = 128 and LSTM_DIM = 512	val_perplexity: 3.3305 
+Trial 10) NUM_LAYERS = 4 and LSTM_DIM = 512			val_perplexity: 3.2726 (CHOSEN)
+Trial 11) NUM_LAYERS = 5 and LSTM_DIM = 512			val_perplexity: 3.3610
+Trial 12) NUM_LAYERS = 4 and LSTM_DIM = 1024			val_perplexity: 3.3656
+ 
 
-
-
-Test Set Results For Trial 3)  test_perplexity: 3.3935		
-	
+Test Set Results For Trial 10)  test_perplexity: 3.2878

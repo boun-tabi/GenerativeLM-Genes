@@ -76,9 +76,9 @@ def make_reproducible():
     tf.config.experimental.enable_op_determinism()
 
 def prepare_actual_datasets():
-    prepare_actual_dataset('./actual_train_without_val_dataset.csv', 'train')
-    prepare_actual_dataset('./actual_val_dataset.csv', 'validation')
-    prepare_actual_dataset('./actual_test_dataset.csv', 'test')
+    prepare_actual_dataset('./train.csv', 'train')
+    prepare_actual_dataset('./validation.csv', 'validation')
+    prepare_actual_dataset('./test.csv', 'test')
 
 def prepare_actual_dataset(path, name):
     dataframe = pd.read_csv(path)

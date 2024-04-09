@@ -18,7 +18,7 @@ import pandas as pd
 
 def main():
     make_reproducible()
-    WILL_DIRECTLY_EVALUATE = True
+    WILL_DIRECTLY_EVALUATE = False
     prepare_actual_datasets()
 
     BATCH_SIZE, SEQ_LEN, MIN_TRAINING_SEQ_LEN, EMBED_DIM, FEED_FORWARD_DIM, NUM_HEADS, NUM_LAYERS, VOCAB_SIZE, EPOCHS, NUM_TOKENS_TO_GENERATE, LR = initialize_hyper_parameters()
@@ -75,9 +75,9 @@ def make_reproducible():
     tf.config.experimental.enable_op_determinism()
 
 def prepare_actual_datasets():
-    prepare_actual_dataset('./actual_train_without_val_dataset.csv', 'train')
-    prepare_actual_dataset('./actual_val_dataset.csv', 'validation')
-    prepare_actual_dataset('./actual_test_dataset.csv', 'test')
+    prepare_actual_dataset('./train.csv', 'train')
+    prepare_actual_dataset('./validation.csv', 'validation')
+    prepare_actual_dataset('./test.csv', 'test')
 
 def prepare_actual_dataset(path, name):
     dataframe = pd.read_csv(path)
