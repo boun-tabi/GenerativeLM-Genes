@@ -1,7 +1,7 @@
 Results
 
 Tets Set Perplexities for Different N Values
-	
-N:6: 3.8652
-N:7: 3.8365
-N:8: 3.8121
+
+N = 6 -> 3.8616488768282546
+N = 7 -> 3.839022537717976
+N = 8 -> 3.8262975800581267
